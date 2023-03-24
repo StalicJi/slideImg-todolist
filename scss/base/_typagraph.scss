@@ -1,0 +1,15 @@
+.heading {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    $color-orange-pink,
+    $color-orange-pink-2
+  );
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

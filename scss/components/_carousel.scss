@@ -1,0 +1,17 @@
+.carousel {
+  width: 100%;
+  margin-left: 1rem;
+
+  &-title {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+  &-img {
+    border-radius: 3px;
+  }
+  &-button {
+    height: 1.6rem !important;
+    width: 1.6rem !important;
+    background-color: brown !important;
+  }
+}

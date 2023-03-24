@@ -1,0 +1,30 @@
+.section__carousel {
+  display: block;
+  margin-top: 5rem;
+  width: 50%;
+}
+
+.section__login {
+  background-image: linear-gradient(
+    to right bottom,
+    $color-begie-light,
+    $color-begie-dark
+  );
+}
+.login {
+  height: 100vh;
+
+  &__form {
+    width: 60%;
+    padding: 6rem;
+    @include absCenter;
+    background-image: linear-gradient(
+      135deg,
+      rgba($color-white, 0.4) 0%,
+      rgba($color-yellow, 0.4) 80%
+    );
+
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.3);
+    border-radius: 3px;
+  }
+}

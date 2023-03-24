@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="scss/main.css" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <title>面試實做</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">面試試題</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link navbar-link active"
+                aria-current="page"
+                href="./index.html"
+                >輪播相片</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar-link" href="./todolist.html"
+                >提醒事項</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar-link" href="./log-in.html">登入</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar-link" href="#">註冊</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Main -->
+    <section class="section__todolist" id="todolist">
+      <div class="todolist">
+        <div class="todolist__btn-group">
+          <div class="todolist__btn__topLeft">
+            <button
+              type="button"
+              onclick="window.location.href='#popup';"
+              class="btn btn-primary todolist__button"
+              id="addlist"
+            >
+              新增提醒事項
+            </button>
+          </div>
+          <div class="todolist__btn__topRight">
+            <div class="nav_btn">
+              <div class="dropdown todolist__btn__dropdown">
+                <button
+                  class="btn btn-outline-secondary dropdown-toggle todolist__button"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Hello !
+                </button>
+                <ul class="dropdown-menu todolist__dropdown">
+                  <li><a class="dropdown-item" href="#">登出</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="todolist__main">
+        <div class="todolist__main--title">
+          <h3>提醒事項</h3>
+        </div>
+        <hr />
+
+        <div class="todolist__main--text" id="tasks">
+          <!-- <div class="todolist__main__lists" id="0">
+            <li class="todolist__main__list">work</li>
+            <p class="todolist__main__time">2020-3-24</p>
+            <div class="todolist__btn todolist__main__lists">
+              <i
+                class="bi bi-pencil-square"
+                id="edit"
+                onClick="editTask(this)"
+              ></i>
+              <i
+                class="bi bi-trash3"
+                id="deleted"
+                onClick="deleteTask(this)"
+              ></i>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- Popup -->
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <h2 class="popup__heading">新增提醒事項</h2>
+        <hr />
+        <!-- popup form START-->
+        <form class="popup__form" id="todoform">
+          <h4 class="popup__heading">提醒事項備註</h4>
+          <div id="msg"></div>
+          <h5>---時間---</h5>
+          <input
+            type="date"
+            name=""
+            id="dateInput"
+            class="form__control data"
+          />
+          <textarea
+            name="textArea"
+            id="textArea"
+            cols="30"
+            rows="10"
+            class="popup__textarea form__control"
+            placeholder="請輸入內容..."
+          ></textarea>
+          <div class="popup__textZone__buttom">
+            <h4 class="popup__heading">是否寄出提醒通知信</h4>
+            <div class="popup__buttom__radio">
+              <input type="radio" name="check" id="NO" checked />
+              <label for="NO" class="popup__label">否</label>
+              <input type="radio" name="check" id="YES" />
+              <label for="YES" class="popup__label">是</label>
+            </div>
+          </div>
+
+          <hr />
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button
+              class="btn btn-secondary me-md-2 popup__btn"
+              type="button"
+              id="cancel"
+            >
+              取消
+            </button>
+            <button class="btn btn-primary popup__btn" type="submit">
+              送出
+            </button>
+          </div>
+        </form>
+        <!-- popup form END-->
+      </div>
+    </div>
+    <!-- BootstrapJs -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- AppJS -->
+    <script src="todo.js"></script>
+  </body>
+</html>

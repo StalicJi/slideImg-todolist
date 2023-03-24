@@ -1,0 +1,99 @@
+.popup {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, 0.9);
+  z-index: 999;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    @include absCenter;
+    width: 75%;
+    height: 68rem;
+    padding: 2rem;
+    background-color: $color-begie-light;
+    border-radius: 3px;
+    box-shadow: 0 2rem 4rem rgba($color-black, $alpha: 0.2);
+  }
+
+  &__heading {
+    font-size: 3rem;
+    padding: 1rem 0;
+    color: $color-gray-dark;
+  }
+
+  &__textZone__buttom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  &__buttom__radio {
+    font-size: 2rem;
+    input {
+      margin-left: 2rem;
+    }
+  }
+  // &__input {
+  //   width: 100%;
+  //   height: 5rem;
+  //   font-size: 2rem;
+  //   padding-left: 1rem;
+  //   color: $color-gray-dark;
+
+  //   &:focus {
+  //     font-size: 2rem;
+  //     padding-left: 1rem;
+  //     color: $color-gray-dark;
+  //   }
+  // }
+
+  // &__label {
+  //   font-size: 2.5rem;
+  //   color: $color-gray-dark;
+  // }
+
+  &__textarea {
+    width: 100%;
+    height: 25rem;
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    color: $color-gray-dark;
+
+    &:focus {
+      font-size: 2rem;
+      padding-left: 1rem;
+      padding-top: 1rem;
+      color: $color-gray-dark;
+    }
+  }
+
+  &__btn {
+    font-size: 2rem !important;
+    margin: 1rem 0;
+    padding: 0.5rem 2rem !important;
+  }
+}
+.form__control {
+  margin-bottom: 1rem;
+}
+.data {
+  width: 35%;
+}
+
+#msg {
+  color: red;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}

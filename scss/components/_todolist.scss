@@ -1,0 +1,105 @@
+.todolist {
+  &__btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 5rem 0;
+  }
+
+  &__btn__topLeft {
+    position: absolute;
+    left: 15%;
+  }
+
+  &__btn__topRight {
+    position: absolute;
+    left: 75%;
+  }
+
+  &__button {
+    font-size: 2rem !important;
+    border: none !important;
+  }
+
+  &__dropdown {
+    font-size: 2rem !important;
+    border: none !important;
+  }
+
+  &__main {
+    background-color: $color-begie-light;
+    margin: 2rem 20rem;
+    padding: 5rem;
+    border-radius: 3px;
+    box-shadow: 0 2rem 4rem rgba($color-black, $alpha: 0.2);
+  }
+
+  &__main--title {
+    display: block;
+
+    h3 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+  }
+
+  &__main--text {
+    h4 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: $color-gray-light;
+      padding-bottom: 2rem;
+    }
+    font-size: 2rem;
+    display: inline-block;
+  }
+
+  &__main__lists {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__main__list {
+    padding-top: 0.7rem;
+    // list-style: none;
+  }
+
+  &__main__time {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 32%;
+    padding-top: 1.4rem;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 70%;
+
+    .bi {
+      padding: 1rem 0.8rem !important;
+
+      &-pencil-square {
+        color: $color-green;
+        font-size: 2rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &-trash3 {
+        color: $color-red;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,391 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #e7ab9a, #df7857);
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section__carousel2 {
+  width: 80%;
+  margin-top: 4rem;
+  margin-left: 1rem;
+}
+.section__carousel2 .cards-container {
+  margin-bottom: 2rem;
+  display: flex;
+  overflow: hidden;
+  width: 127rem;
+}
+.section__carousel2 .cards-container .slide-group {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  transition: 1s ease-in-out;
+}
+.section__carousel2 .cards-container .slide-group .card-component {
+  padding: 1px 10px 10px 10px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.section__carousel2 .cards-container .slide-group .card-component .card {
+  border: none;
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+}
+.section__carousel2 .cards-container .slide-group .card-component .card .card-photo {
+  width: 30rem;
+  height: 40rem;
+}
+.section__carousel2 .cards-container .slide-group .card-component .card .card-photo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 30rem;
+  height: 40rem;
+}
+.section__carousel2 .cards-container .slide-group .card-component .card .card-photo img:hover {
+  scale: 1.05;
+  transition: all 0.3s ease-in-out;
+}
+.section__carousel2 .cards-container .slide-group .card-component .card .card-text {
+  text-align: center;
+  margin-top: 2rem;
+}
+.section__carousel2 .slider {
+  margin-bottom: 3rem;
+}
+.section__carousel2 .slider .slides {
+  display: flex;
+  justify-content: center;
+  margin-right: 25rem;
+}
+.section__carousel2 .slider .slides .radio-btn {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(73, 63, 189, 0.3647058824);
+}
+.section__carousel2 .slider .slides .radio-btn:hover {
+  background-color: #493fbd;
+  transition: all 0.3s ease-in-out;
+}
+
+.form__title-style {
+  text-align: center;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form__input {
+  font-size: 2rem;
+  color: #8e8e8e;
+  display: block;
+  background-color: rgba(204, 213, 174, 0.4);
+  border: none;
+  border-radius: 3px;
+  border-bottom: 3px solid transparent;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  transition: all 0.3s;
+}
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 5px solid #ccd5ae;
+}
+.form__input:focus:invalid {
+  border-bottom: 5px solid #e7ab9a;
+}
+.form__label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  color: #8e8e8e;
+}
+.form__input:-moz-placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+.form__group--btn {
+  margin-left: 85%;
+}
+.form__btn--text {
+  color: #474747;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+.form__btn {
+  font-size: 1.5rem;
+  background-color: #e7ab9a;
+  padding: 1rem 1.5rem;
+  margin-left: 2.5rem;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  color: #474747;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form__btn:hover {
+  transform: translateY(-0.5rem) scale(1.1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+.form__btn:active {
+  transform: translateY(0rem) scale(1);
+}
+
+h1.heading {
+  font-size: 3rem;
+  color: #474747;
+  display: block;
+  text-align: center;
+}
+
+.carousel {
+  width: 100%;
+  margin-left: 1rem;
+}
+.carousel-title {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+.carousel-img {
+  border-radius: 3px;
+}
+.carousel-button {
+  height: 1.6rem !important;
+  width: 1.6rem !important;
+  background-color: brown !important;
+}
+
+.popup {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 68rem;
+  padding: 2rem;
+  background-color: #f9f5eb;
+  border-radius: 3px;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+.popup__heading {
+  font-size: 3rem;
+  padding: 1rem 0;
+  color: #474747;
+}
+.popup__textZone__buttom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.popup__buttom__radio {
+  font-size: 2rem;
+}
+.popup__buttom__radio input {
+  margin-left: 2rem;
+}
+.popup__textarea {
+  width: 100%;
+  height: 25rem;
+  font-size: 2rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  color: #474747;
+}
+.popup__textarea:focus {
+  font-size: 2rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  color: #474747;
+}
+.popup__btn {
+  font-size: 2rem !important;
+  margin: 1rem 0;
+  padding: 0.5rem 2rem !important;
+}
+
+.form__control {
+  margin-bottom: 1rem;
+}
+
+.data {
+  width: 35%;
+}
+
+#msg {
+  color: red;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.todolist__btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 5rem 0;
+}
+.todolist__btn__topLeft {
+  position: absolute;
+  left: 15%;
+}
+.todolist__btn__topRight {
+  position: absolute;
+  left: 75%;
+}
+.todolist__button {
+  font-size: 2rem !important;
+  border: none !important;
+}
+.todolist__dropdown {
+  font-size: 2rem !important;
+  border: none !important;
+}
+.todolist__main {
+  background-color: #f9f5eb;
+  margin: 2rem 20rem;
+  padding: 5rem;
+  border-radius: 3px;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+.todolist__main--title {
+  display: block;
+}
+.todolist__main--title h3 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.todolist__main--text {
+  font-size: 2rem;
+  display: inline-block;
+}
+.todolist__main--text h4 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #8e8e8e;
+  padding-bottom: 2rem;
+}
+.todolist__main__lists {
+  display: flex;
+  flex-direction: row;
+}
+.todolist__main__list {
+  padding-top: 0.7rem;
+}
+.todolist__main__time {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 32%;
+  padding-top: 1.4rem;
+}
+.todolist__btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 70%;
+}
+.todolist__btn .bi {
+  padding: 1rem 0.8rem !important;
+}
+.todolist__btn .bi-pencil-square {
+  color: green;
+  font-size: 2rem;
+}
+.todolist__btn .bi-pencil-square:hover {
+  cursor: pointer;
+}
+.todolist__btn .bi-trash3 {
+  color: #f14747;
+}
+.todolist__btn .bi-trash3:hover {
+  cursor: pointer;
+}
+
+.navbar {
+  font-size: 1.8rem;
+}
+.navbar-brand {
+  font-size: 2.5rem !important;
+  margin-left: 1rem;
+}
+.navbar-link {
+  margin-left: 1.5rem !important;
+}
+
+.section__carousel {
+  display: block;
+  margin-top: 5rem;
+  width: 50%;
+}
+
+.section__login {
+  background-image: linear-gradient(to right bottom, #f9f5eb, #ccd5ae);
+}
+
+.login {
+  height: 100vh;
+}
+.login__form {
+  width: 60%;
+  padding: 6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(135deg, rgba(238, 238, 238, 0.4) 0%, rgba(255, 221, 131, 0.4) 80%);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}/*# sourceMappingURL=main.css.map */
