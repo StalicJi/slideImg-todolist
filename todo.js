@@ -114,7 +114,7 @@ const popupUI = () => {
 };
 
 (() => {
-  data = JSON.parse(localStorage.getItem("data"));
+  data = JSON.parse(localStorage.getItem("data")) || [];
   createTask();
   console.log(data);
 })();
